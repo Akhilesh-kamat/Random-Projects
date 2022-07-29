@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://replit.com/public/icons/favicon-196.png" sizes="196x196" type="image/png"/>
+    <title>carosle</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            
+
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: 0.5s;
+            background-color: rgb(226, 246, 246);
+            
+
+
+
+        }
+
+        .container img {
+            /* aspect-ratio: 19/9; */
+            height: 60vh;
+            /* width; 80vw; */
+            /* margin-top: 100px; */
+            padding: 10px;
+            transition: 0.5s;
+            z-index: 100;
+            border: none;
+            display:block;
+            overflow: hidden;
+            
+        }
+
+        .btn-container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            /* pointer-events: none; */
+        }
+
+        .btn {
+            height: 5em;
+            width: 5em;
+            background-color: rgba(241, 163, 163, 0.6);
+            outline: none;
+            border: none;
+            border-radius: 90px 5px 5px 5px;
+            color: rgb(255, 255, 255);
+            transition: 0.3s;
+
+
+        }
+
+        .btn1 {
+            transform: rotate(140deg);
+        }
+
+        .btn2 {
+            transform: rotate(-50deg);
+        }
+
+        .btn1:hover {
+            transform: rotate(140deg) translate(5px, 5px);
+            background-color: rgba(231, 20, 20, 0.3);
+
+            /* transform: translatex(-6px); */
+            color: rgb(234, 198, 211);
+
+        }
+
+        .btn2:hover {
+            background-color: rgba(231, 20, 20, 0.3);
+            transform: rotate(-50deg) translate(5px, 5px);
+
+            color: rgb(234, 198, 211);
+
+        }
+        img:hover{
+            transform: translate(-8px,-10px);
+            box-shadow: 8px 15px 20px 0px #bdb3b3;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="1.jpg" alt="" id="pic1">
+        <!-- <img src="2.jpg" alt="" id="pic2">
+        <img src="3.jpg" alt="" id="pic3">
+        <img src="4.jpg" alt="" id="pic4"> -->
+        <div class="btn-container">
+
+            <button class="btn btn1" id="bt1"></button>
+            <button class="btn btn2" id="bt2"></button>
+        </div>
+        
+    </div>
+    <script>
+
+        let pics = ["1.jpg", '2.jpg', '3.jpg', '4.jpg'];
+        const btn1 = document.getElementById('bt1');
+        const btn2 = document.getElementById('bt2');
+        const img1 = document.getElementById('pic1');;
+        let i = 0;
+        btn2.onclick = plus;
+        function plus() {
+            
+            i += 1;
+
+            // console.log(pics[i])
+            if (i <= 3) {
+                img1.src = pics[i]
+            }
+            else {
+                i = 0;
+                img1.src = pics[i]
+
+            }
+        };
+        btn1.onclick = minus;
+        let ii = 4;
+        function minus() {
+             ii -= 1;
+
+             if (ii>=0){
+
+                img1.src = pics[ii]
+             }
+             else{
+                ii = 3;
+                img1.src = pics[ii]
+             }
+
+            // if (ii>=0) {
+
+
+            //     img1.src = pics[ii]
+            // }
+            // else {
+            //      ii = 0;
+            //     img1.src = pics[ii]
+            // }
+
+        };
+        const onclick = () => {
+            
+        }
+
+
+    </script>
+</body>
+
+</html>

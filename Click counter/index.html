@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            height: 45px;
+            width: 150px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button class="btn" id="clck" onclick="hello()">Click me</button>
+        <div></div>
+        <button class="btn" id="aclck" onclick="Auto01()">Auto click</button>
+        <div></div>
+        <p style="font-size: 25px; margin: 20px;">clicks: <a id="clicks">0</a></p>
+    </div>
+    <script>
+        let clicks = 0;
+        function hello() {
+            clicks += 1;
+            document.getElementById("clicks").innerText = clicks;
+        };
+        // let AutoClick = document.getElementById('aclck');
+        let clck = document.getElementById('clck');
+
+        function Auto01() {
+
+            setInterval(function ()  {
+                clck.click();
+            }, 500);
+        };
+
+    // AutoClick.onclick = Auto01;
+
+    // AutoClick.addEventListener('click',function(){
+    //     setInterval(function(){
+    //     clck.click();
+    // },500);
+
+    // })
+   
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Comic+Neue:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Neue,sans-serif!important;
+}
+
+body{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+
+}
+.container{
+    margin: 1.5rem;
+    max-width: 95%;
+    border: 0.2rem solid #158cba;
+    position: relative;
+    padding-bottom: 0.3rem;
+    overflow: hidden;
+
+    
+}
+h1{
+    text-align: center;
+    color: white;
+    background-color: #158cba;
+}
+ 
+#para{
+    text-align: center;
+    color: white;
+    background-color: #158cba;
+    height: 2rem;
+    max-width: 100%;
+    padding-top: 0.2rem;
+    font-size: 1rem;
+}
+
+.line1{
+    height: 0.2rem;
+    width: 100%;
+    background-color: #1981a9;
+    
+}
+.line2{
+    height: 0.2rem;
+    width: 100%;
+        background-color: rgb(195, 190, 190);
+}
+.result{
+    display:flex;
+    height: 3.5rem;
+    
+    background-color: #158cba;
+    width: 35%;
+    align-items: center;
+    margin: 0.5rem;
+    border-radius: 0.8rem;
+    padding: .125rem .0625rem .125rem 0.9375rem;
+    color: #fff;
+    
+    box-sizing: border-box;
+    
+}
+.result p{
+    font-size: 2rem;
+
+
+}
+.input{
+    margin-left: 0.5rem;
+    outline: none;
+    border-color: #158cba;
+    font-size: 2rem;
+    width: 61rem; 
+    height: 24rem;
+}
+
+@media (max-width:500px){
+    html{
+        font-size: 30%;
+    }
+}
+/* @media (max-width:420px){
+    html{
+        font-size: 30%;
+    }
+} */
+
+.img{
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: 27rem;
+    bottom: 26rem;
+    opacity: 0;
+}
+.imgActive{
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: 27rem;
+    bottom: 26rem;
+    opacity: 0;
+    
+    z-index: 1;
+    /* transition: 0.5s; */
+    animation: shinchan 10s  forwards;
+    
+}
+
+
+
+@keyframes shinchan {
+    0%{
+        height: 1rem;
+        width: 1rem;
+        opacity: 0;
+        transform: translate(0rem, 0rem);
+    }
+    50%{
+        height: 2rem;
+        width: 2rem;
+        opacity: 1;
+        transform: translate(37rem, 0rem);
+    }
+    100%{
+        height: 7rem;
+        width: 7rem;
+        opacity: 1;
+        transform: translate(37rem, 25rem);
+    }
+    /* 100%{
+        height: 5rem;
+        width: 5rem;
+        transform: translate(37rem, 25rem);
+    } */
+    
+}
+
+
+
