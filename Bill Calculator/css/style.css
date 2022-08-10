@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', , Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    min-width: 100vw;
+    height: 100vh;
+    background-color: rgb(170, 107, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 30%;
+    background-color: rgb(15, 15, 81);
+    color: #fff;
+    height: 80%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0.5rem;
+}
+
+.heading {
+    grid-column: span 2;
+
+    font-size: 1.5rem;
+    text-align: start;
+    display: flex;
+    align-items: flex-end;
+    padding: 00.5rem 1rem;
+}
+
+.tip-input-wrapper {
+    /* position: relative; */
+    border: 2px solid red;
+    /* top: -2rem; */
+}
+
+.input {
+    grid-column: span 2;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 90%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0 0.5rem;
+}
+
+.input-form {
+    outline: none;
+    border: none;
+    width: 90%;
+    height: 50%;
+    padding: 0.2rem;
+    z-index: 100;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0 0.2rem;
+
+}
+
+
+.input-form:focus-visible {
+    outline: none !important;
+    border: none;
+}
+
+.input2 {
+    position: relative;
+    top: 0rem;
+}
+
+.people-wrapper {
+    padding: 0 1rem;
+    /* border: 2px solid hotpink; */
+}
+
+.total {
+    grid-column-start: 2;
+
+}
+
+.btn-wrapper {
+    /* display: flex;
+    justify-content: flex-start; */
+    /* border: 2px solid red; */
+    margin-top: 1rem;
+    position: relative;
+    right: 1rem;
+    top: 0;
+}
+
+.btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(170, 107, 230);
+    border: none;
+    margin: 0.5rem;
+}
+
+.total-wrapper {
+    /* border: 2px solid yellow; */
+}
+
+.total {
+    /* border: 2px solid white; */
+    position: relative;
+    top: 1rem;
+}
+
+.no-people {
+    font-size: 1.4rem;
+}
+
+.total {
+    font-size: 2rem;
+}
+
+.second-heading {
+    font-size: 1.3rem;
+}
