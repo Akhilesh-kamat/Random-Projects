@@ -7,7 +7,7 @@ function clean(){
 }
 
 function del(){
-    document.calc.txt.value = document.calc.txt.value.slice(0,-1)
+    document.calc.txt.value = document.calc.txt.value.slice(0, -1)
 }
 
 let spn = document.querySelectorAll('.num');
